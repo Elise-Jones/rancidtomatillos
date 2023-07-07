@@ -1,7 +1,7 @@
 import Card from '../Card/Card'
 import './Gallery.css'
 
-const Gallery = ( { movies } ) => {
+const Gallery = ( { movies, selectMovie } ) => {
 
   const movieCards = movies.map(movie => {
     return (
@@ -11,6 +11,7 @@ const Gallery = ( { movies } ) => {
         image={movie.poster_path}
         id={movie.id}
         key={movie.id}
+        selectMovie={selectMovie}
       />
     )
   })

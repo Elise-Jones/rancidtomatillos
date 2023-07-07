@@ -5,11 +5,11 @@ import { useState } from 'react';
 
 const App = () => {
   const [movies, setMovies] = useState(movieData.movies);
-  const [selectedMovie, setSelectedMovie] = useState('movie');
+  const [selectedMovie, setSelectedMovie] = useState('');
 
-  // const updateSelectedMovie = () => {
-
-  // }
+  const selectMovie = (id) => {
+    console.log(id)
+  }
 
 // set state for selected Movie
 // declare setter function  that is passed down to Gallery as a prop
@@ -19,7 +19,7 @@ const App = () => {
     <h1>Rancid Tomatillos</h1>
     {/* conditional: selectedMove && One Movie component */}
     {/* when home button is clicked, reset selectedMovie to falsy? */}
-    {selectedMovie ? <h3>MOVIE PAGE</h3> : <Gallery movies={movies}/>}
+    {selectedMovie ? <h3>MOVIE PAGE</h3> : <Gallery movies={movies} selectMovie={selectMovie} />}
   </>
 
   )
