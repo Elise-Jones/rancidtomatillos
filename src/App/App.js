@@ -4,12 +4,12 @@ import './App.css';
 import { useState } from 'react';
 
 const App = () => {
-  const [movies, setMovies] = useState(movieData);
-
+  const [movies, setMovies] = useState(movieData.movies);
+console.log('movieData', movieData)
   return (
   <>
   <h1>Rancid Tomatillos</h1>
-    <Gallery />
+    <Gallery movies={movies}/>
   </>
 
   )
