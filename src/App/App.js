@@ -1,4 +1,5 @@
 import Gallery from '../Gallery/Gallery'
+import Movie from '../Movie/Movie'
 import movieData from '../sampleData';
 import './App.css';
 import { useState } from 'react';
@@ -26,7 +27,7 @@ const App = () => {
       <h1>Rancid Tomatillos</h1>
       {/* conditional: selectedMove && One Movie component */}
       {/* when home button is clicked, reset selectedMovie to falsy? */}
-      {selectedMovie ? <h3>//component name pass movie as prop{selectedMovie}</h3> : <Gallery movies={movies} selectMovie={selectMovie} />}
+      {selectedMovie ? <Movie movie={movie}/> : <Gallery movies={movies} selectMovie={selectMovie} />}
     </>
   )
 }
