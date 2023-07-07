@@ -8,20 +8,20 @@ const App = () => {
   const [selectedMovie, setSelectedMovie] = useState('');
 
   const selectMovie = (id) => {
-    console.log(id)
+    setSelectedMovie(id)
   }
 
-// set state for selected Movie
-// declare setter function  that is passed down to Gallery as a prop
+  // use find to select the desired movie object from the movies array
+  // pass object to movie component
+  // in movie component, render all movie details
 
   return (
-  <>
-    <h1>Rancid Tomatillos</h1>
-    {/* conditional: selectedMove && One Movie component */}
-    {/* when home button is clicked, reset selectedMovie to falsy? */}
-    {selectedMovie ? <h3>MOVIE PAGE</h3> : <Gallery movies={movies} selectMovie={selectMovie} />}
-  </>
-
+    <>
+      <h1>Rancid Tomatillos</h1>
+      {/* conditional: selectedMove && One Movie component */}
+      {/* when home button is clicked, reset selectedMovie to falsy? */}
+      {selectedMovie ? <h3>{selectedMovie}</h3> : <Gallery movies={movies} selectMovie={selectMovie} />}
+    </>
   )
 }
 
