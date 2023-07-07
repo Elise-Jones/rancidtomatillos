@@ -1,4 +1,6 @@
 import Card from '../Card/Card'
+import './Gallery.css'
+
 const Gallery = ( { movies } ) => {
 
   const movieCards = movies.map(movie => {
