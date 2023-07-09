@@ -5,7 +5,7 @@ const getMoviesData = () => {
 }
 
 const getSelectedMovieData = (id) => {
-  return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/movies/${id}`)
+  return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
     .then(response => checkForError(response))
     .catch(error => alert(`${error.message}`))
 }
@@ -17,8 +17,5 @@ const checkForError = (response) => {
     throw new Error(`${response.status}: ${response.statusText}`);
   };
 };
-
-
-
 
 export { getMoviesData, getSelectedMovieData }

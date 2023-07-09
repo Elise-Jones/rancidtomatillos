@@ -15,25 +15,16 @@ const App = () => {
       .catch(error => console.log(error))
   }, [])
 
-  const selectMovie = (id) => {
-
+  const selectMovie = (movie) => {
+    setSelectedMovie(movie)
   }
-  
-  const movie = movies.find((movie) => { 
-      return movie.id === selectedMovie
-  })
 
   return (
     <>
       <h1 onClick={() => selectMovie('')}>Rancid Tomatillos</h1>
-      {selectedMovie ? <Movie movie={movie} movies={movies} selectedMovie={selectedMovie} selectMovie={selectMovie}/> : <Gallery movies={movies} selectMovie={selectMovie} />}
+      {selectedMovie ? <Movie movie={selectedMovie} movies={movies} selectedMovie={selectedMovie} selectMovie={selectMovie}/> : <Gallery movies={movies} selectMovie={selectMovie} />}
     </>
   )
 }
 
 export default App
-
-// when a card is clicked, a function in Card is run that captures the id of the event target
-// the function must live in App so that Movie can gain access to the id
-// run a function that passes the id through the api call and returns a movie object
-

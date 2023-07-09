@@ -5,12 +5,13 @@ import {getSelectedMovieData } from '../apiCalls'
 const Card = ({ title, rating, image, id, selectMovie}) => {
   const [movieID, setMovieID] = useState('');
 
-  useEffect((movieID) => {
+  useEffect(() => {
     if (movieID) {
       getSelectedMovieData(movieID)
-      .then(data => selectMovie(data))
-      .then(data => console.log(data))
+      .then(data => selectMovie(data.movie))
     }
+
+    return setMovieID(prevState => '')
   }, [movieID])
   
   return (
