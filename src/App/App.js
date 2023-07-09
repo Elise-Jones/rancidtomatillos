@@ -2,11 +2,18 @@ import Gallery from '../Gallery/Gallery'
 import Movie from '../Movie/Movie'
 import movieData from '../sampleData';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getMoviesData } from '../apiCalls'
 
 const App = () => {
   const [movies, setMovies] = useState(movieData.movies);
   const [selectedMovie, setSelectedMovie] = useState('');
+
+  useEffect(() => {
+    getMoviesData()
+      .then(data => setMovies(data.movies))
+      .catch(error => console.log(error))
+  }, [])
 
   const selectMovie = (id) => {
     setSelectedMovie(parseInt(id))
