@@ -1,10 +1,13 @@
-const Movie = ({ movie }) => {
-  return(
-    <main>
+import "./Movie.css";
+const Movie = ({ movie, selectMovie }) => {
+
+  return (
+    <main className="single-movie-container">
+      <button onClick={() => selectMovie('')}>go back</button>
       <h2>{movie.title}</h2>
       <h3>{movie.tagline}</h3>
       <span>
-        <img src={movie.poster_path}/>
+        <img className="movie-image" src={movie.poster_path} />
         <div>
           <p>{movie.overview}</p>
           <p>{movie.average_rating}</p>
@@ -16,7 +19,7 @@ const Movie = ({ movie }) => {
         </div>
       </span>
     </main>
-  )
-}
+  );
+};
 
-export default Movie
+export default Movie;

@@ -18,18 +18,12 @@ const App = () => {
     })
   
 
-  // use find to select the desired movie object from the movies array
-  // pass object to movie component
-  // in movie component, render all movie details
-
   return (
     <>
-      <h1>Rancid Tomatillos</h1>
-      {/* conditional: selectedMove && One Movie component */}
-      {/* when home button is clicked, reset selectedMovie to falsy? */}
-      {selectedMovie ? <Movie movie={movie}/> : <Gallery movies={movies} selectMovie={selectMovie} />}
+      <h1 onClick={() => selectMovie('')}>Rancid Tomatillos</h1>
+      {selectedMovie ? <Movie movie={movie} movies={movies} selectedMovie={selectedMovie} selectMovie={selectMovie}/> : <Gallery movies={movies} selectMovie={selectMovie} />}
     </>
   )
 }
 
-export default App;
+export default App
