@@ -16,7 +16,7 @@ const App = () => {
   }, [])
 
   const selectMovie = (id) => {
-    setSelectedMovie(parseInt(id))
+
   }
   
   const movie = movies.find((movie) => { 
@@ -32,3 +32,8 @@ const App = () => {
 }
 
 export default App
+
+// when a card is clicked, a function in Card is run that captures the id of the event target
+// the function must live in App so that Movie can gain access to the id
+// run a function that passes the id through the api call and returns a movie object
+
