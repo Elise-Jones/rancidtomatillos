@@ -25,4 +25,5 @@ const Gallery = ( { movies, selectMovie } ) => {
     </main>
   )
 }
+
 export default Gallery

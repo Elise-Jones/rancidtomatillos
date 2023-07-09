@@ -11,12 +11,10 @@ const App = () => {
   const selectMovie = (id) => {
     setSelectedMovie(parseInt(id))
   }
-
   
   const movie = movies.find((movie) => { 
       return movie.id === selectedMovie
-    })
-  
+  })
 
   return (
     <>
