@@ -28,3 +28,8 @@ const Gallery = ( { movies, selectMovie } ) => {
 }
 
 export default Gallery
+
+Gallery.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object),
+  selectMovie: PropTypes.func.isRequired
+}
