@@ -1,4 +1,5 @@
 import Card from '../Card/Card'
+import PropTypes from 'prop-types';
 import './Gallery.css'
 
 const Gallery = ( { movies, selectMovie } ) => {
@@ -27,3 +28,8 @@ const Gallery = ( { movies, selectMovie } ) => {
 }
 
 export default Gallery
+
+Gallery.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object),
+  selectMovie: PropTypes.func.isRequired
+}

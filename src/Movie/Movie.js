@@ -1,4 +1,5 @@
 import "./Movie.css";
+import PropTypes from 'prop-types';
 const Movie = ({ movie, selectMovie }) => {
 
   return (
@@ -23,3 +24,8 @@ const Movie = ({ movie, selectMovie }) => {
 };
 
 export default Movie;
+
+Movie.propTypes = {
+  movie: PropTypes.object,
+  selectMovie: PropTypes.func.isRequired
+}
