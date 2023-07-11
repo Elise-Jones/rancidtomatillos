@@ -21,7 +21,10 @@ const App = () => {
 
   return (
     <>
-      <h1 onClick={() => selectMovie('')}>Rancid Tomatillos</h1>
+      <header>
+        <h1 onClick={() => selectMovie('')}>Rancid Tomatillos</h1>
+        <h2 className="subheader">Unleash Movie Magic 💫</h2>
+      </header>
       {selectedMovie ? <Movie movie={selectedMovie} movies={movies} selectedMovie={selectedMovie} selectMovie={selectMovie}/> : <Gallery movies={movies} selectMovie={selectMovie} />}
     </>
   )
