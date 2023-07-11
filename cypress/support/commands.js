@@ -15,6 +15,15 @@ Cypress.Commands.add('loadPage', () => {
     })
     .visit('http://localhost:3000/');
 })
+
+Cypress.Commands.add('getSingleMovieView', () => {
+  cy.get('.cards-container')
+  .get('.card-details')
+  .first()
+  .contains("h3", "Black Adam")
+  .click()
+  .get('.single-movie-container')
+})
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
