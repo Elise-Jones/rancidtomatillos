@@ -38,7 +38,7 @@ describe("Should be able to click one movie and show additional details about th
     .contains('h3', 'The world needed a hero. It got Black Adam.')
   })
   it('Should show a back button', () => {
-    cy.getSingleMovieView()
+    cy.getFirstMovieView()
     .find('button')
     .contains('go back')
   });

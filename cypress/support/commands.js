@@ -16,7 +16,7 @@ Cypress.Commands.add('loadPage', () => {
     .visit('http://localhost:3000/');
 })
 
-Cypress.Commands.add('getSingleMovieView', () => {
+Cypress.Commands.add('getSingleFirstView', () => {
   cy.get('.cards-container')
   .get('.card-details')
   .first()
