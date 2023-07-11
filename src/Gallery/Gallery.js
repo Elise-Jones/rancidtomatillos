@@ -19,10 +19,12 @@ const Gallery = ( { movies, selectMovie } ) => {
 
   return (
     <main className="gallery">
-      <h2>All movies</h2>
-      <section className="cards-container">
-        {movieCards}
-      </section>
+      <div className="main-overlay">
+        <h2>~ What to Watch ~</h2>
+        <section className="cards-container">
+          {movieCards}
+        </section>
+      </div>
     </main>
   )
 }
