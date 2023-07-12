@@ -11,8 +11,7 @@
 
 header {
   background-color: #EDF2F4;
-  box-shadow: 0 10px 8px -8px #FDF0D5; 
-  width: 100%;
+  box-shadow: 0 0 25px #FDF0D5; 
   top: 0;
   display: flex;
   flex-direction: column;
