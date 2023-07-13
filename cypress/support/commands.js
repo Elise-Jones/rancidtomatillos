@@ -17,12 +17,13 @@ Cypress.Commands.add('loadPage', () => {
 })
 
 Cypress.Commands.add('getSingleFirstView', () => {
+  cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270', {
+      statusCode: 200,
+      fixture: 'movie'
+    })
   cy.get('.cards-container')
-  .get('.card-details')
-  .first()
-  .contains("h3", "Black Adam")
-  .click()
-  .get('.single-movie-container')
+    .get('article').first().contains('h3', 'Black Adam')
+    .click()
 })
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })

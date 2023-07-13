@@ -9,7 +9,7 @@ const Movie = ({ movie, selectMovie }) => {
       <h3>{movie.tagline}</h3>
       <span>
         <img className="movie-image" src={movie.poster_path} />
-        <div>
+        <div className="movie-details">
           <p>{movie.overview}</p>
           <p>{movie.average_rating}</p>
           <p>{movie.genres}</p>
