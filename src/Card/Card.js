@@ -1,7 +1,5 @@
 import './Card.css'
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react'
-import {getSelectedMovieData } from '../apiCalls'
 
 const Card = ({ title, rating, image }) => {
   return (
