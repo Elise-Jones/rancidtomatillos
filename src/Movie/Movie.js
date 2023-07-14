@@ -17,25 +17,34 @@ const Movie = () => {
     .then(data => selectMovie(data.movie))
   }, [])
 
+  const formatDate = () => {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    const date = new Date(selectedMovie.release_date)
+    const month = months[date.getMonth() - 1]
+    return `${month} ${date.getDate()}, ${date.getFullYear()}`;
+  }
+
   return (
-    <main className="single-movie-container">
-      <Link to='/'>
-        <button>go back</button>
-      </Link>
-      <h2>{selectedMovie.title}</h2>
-      <h3>{selectedMovie.tagline}</h3>
-      <span>
-        <img className="movie-image" src={selectedMovie.poster_path} />
-        <div>
+    <main>
+      <div className="main-overlay">
+        <Link to='/'>
+          <button><span class="material-icons-round">arrow_back</span>Go Back</button>
+        </Link>
+        <h2 className="title">~{selectedMovie.title}~</h2>
+        <h3 className="tagline">{selectedMovie.tagline}</h3>
+        <section className="movie-details-container">
+          <img className="movie-image" src={selectedMovie.poster_path} />
+          <div className="movie-details">
           <p>{selectedMovie.overview}</p>
-          <p>{selectedMovie.average_rating}</p>
-          <p>{selectedMovie.genres}</p>
-          <p>{selectedMovie.release_date}</p>
-          <p>{selectedMovie.runtime}</p>
-          <p>{selectedMovie.budget}</p>
-          <p>{selectedMovie.revenue}</p>
-        </div>
-      </span>
+              <p>🍅 Rating: {selectedMovie.average_rating}/10</p>
+              <p>Genres: {selectedMovie.genres}</p>
+              <p>Release Date: {formatDate()}</p>
+              <p>Runtime: {selectedMovie.runtime} min</p>
+              <p>Budget: ${selectedMovie.budget}</p>
+              <p>Runtime: ${selectedMovie.revenue}</p>
+          </div>
+        </section>
+      </div>
     </main>
   );
 };
