@@ -16,9 +16,8 @@ const Card = ({ title, rating, image }) => {
 export default Card
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
-  image: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
-  selectMovie: PropTypes.func.isRequired 
-};
+
+    title: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired
+}

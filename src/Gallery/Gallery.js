@@ -9,7 +9,7 @@ const Gallery = ( { movies } ) => {
     return (
       <Link to={`${movie.id}`}>
         <Card
-          title={movie.title}
+          title={22}
           rating={movie.average_rating}
           image={movie.poster_path}
           // is this id needed?
@@ -36,5 +36,4 @@ export default Gallery
 
 Gallery.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object),
-  selectMovie: PropTypes.func.isRequired
 }
