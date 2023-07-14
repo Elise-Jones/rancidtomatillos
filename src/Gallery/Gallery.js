@@ -12,7 +12,6 @@ const Gallery = ( { movies } ) => {
           title={movie.title}
           rating={movie.average_rating}
           image={movie.poster_path}
-          // is this id needed?
           id={movie.id}
         />
       </Link>

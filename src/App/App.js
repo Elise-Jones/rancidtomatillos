@@ -13,6 +13,7 @@ const App = () => {
     getMoviesData()
       .then(data => setMovies(data.movies))
       .catch(error => console.log(error))
+      // need to add UI error handling
   }, [])
 
   return (

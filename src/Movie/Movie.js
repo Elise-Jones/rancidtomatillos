@@ -10,7 +10,6 @@ const Movie = () => {
 
   const selectMovie = (movie) => {
     setSelectedMovie(movie)
-    console.log('selectedmovie', selectedMovie)
   } 
 
   useEffect(() => {
