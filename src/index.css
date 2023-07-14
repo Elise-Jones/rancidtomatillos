@@ -1,19 +1,30 @@
-/* 2B2D42 - Space cadet
-8D99AE - Cool gray
-EDF2F4 - Anti-flash white
-EF233C - Red (Pantone)
-D80032 - Crimson */
+/* 
+#2B2D42 - Space cadet
+#003049 - Prussian blue
+#669BBC - Air superiority blue 
+#FDF0D5 - Papaya whip
+#EDF2F4 - Anti-flash white
+#C1121F - Fire brick
+#780000 - Barn red
+*/
 
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  /* border: 1px solid Crimson; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+html {
+  height: 100vh;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #003049;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}

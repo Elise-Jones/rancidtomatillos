@@ -1,26 +1,13 @@
 import './Card.css'
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react'
-import {getSelectedMovieData } from '../apiCalls'
 
-const Card = ({ title, rating, image, id, selectMovie}) => {
-  const [movieID, setMovieID] = useState('');
-
-  useEffect(() => {
-    if (movieID) {
-      getSelectedMovieData(movieID)
-      .then(data => selectMovie(data.movie))
-    }
-
-    return setMovieID(prevState => '')
-  }, [movieID])
-  
+const Card = ({ title, rating, image }) => {
   return (
     <article>
       <img src={image} className="card-image" />
       <div className="card-details">
-        <h3 id={id} onClick={(event) => setMovieID(event.target.id)}>{title}</h3>
-        <p>{rating}</p>
+        <h3>{title}</h3>
+        <p>🍅 Rating: {rating}/10</p>
       </div>
     </article>
   ) 
