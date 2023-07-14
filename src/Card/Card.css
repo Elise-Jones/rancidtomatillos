@@ -1,29 +1,48 @@
-.card-image {
-  width: 200px;
-}
+/* 
+#2B2D42 - Space cadet
+#003049 - Prussian blue
+#669BBC - Air superiority blue 
+#FDF0D5 - Papaya whip
+#EDF2F4 - Anti-flash white
+#C1121F - Fire brick
+#780000 - Barn red
+*/
 
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1.5rem;
 }
 
-h3, p {
-  font-family: Prompt;
-  font-weight: 300;
-  font-size: 1.5rem;
+article:hover {
+  cursor: pointer;
 }
 
-p {
-  font-size: 1rem;
+.card-image {
+  width: 55%;
+  border-radius: 12px;
+  box-shadow: 0 0 5px #2B2D42; 
 }
 
 .card-details{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
-h3:hover {
-  cursor: pointer;
+.card-title {
+  margin: 1rem 0 0;
+}
+
+.card-rating {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.card-title,
+.card-rating {
+  text-align: center;
+  width: 100%;
 }
