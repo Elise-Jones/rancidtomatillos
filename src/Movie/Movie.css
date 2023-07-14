@@ -1,18 +1,61 @@
-.movie-image {
-  height: 400px;
-  width: 500px;
-}
+/* 
+#2B2D42 - Space cadet
+#003049 - Prussian blue
+#669BBC - Air superiority blue 
+#FDF0D5 - Papaya whip
+#EDF2F4 - Anti-flash white
+#C1121F - Fire brick
+#780000 - Barn red
+*/
 
-.single-movie-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h3, p {
-  text-align: center;
+.movie-overlay {
+  width: 80%;
+  background-color: #EDF2F4;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #FDF0D5;
+  margin: 2rem;
 }
 
 button {
+  background-color: #669BBC;
+  font-family: Caveat;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 12px;
+  margin: 2rem;
   align-self: flex-start;
+  border: 0;
 }
+
+button:hover {
+  background-color: #FDF0D5;
+  cursor: pointer;
+  box-shadow: 0 0 10px #C1121F;
+}
+
+.title {
+  margin: 0;
+}
+
+.tagline {
+  width: auto;
+}
+
+.movie-details-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 3rem;
+}
+
+.movie-image {
+  width: 20%;
+  border-radius: 12px;
+}
+
+.movie-details {
+  width: 50%;
+}
+

@@ -19,8 +19,8 @@ const Card = ({ title, rating, image, id, selectMovie}) => {
     <article>
       <img src={image} className="card-image" />
       <div className="card-details">
-        <h3 id={id} onClick={(event) => setMovieID(event.target.id)}>{title}</h3>
-        <p>🍅 Rating: {rating}/10</p>
+        <h3 className="card-title" id={id} onClick={(event) => setMovieID(event.target.id)}>{title}</h3>
+        <p className="card-rating">🍅 Rating: {rating}/10</p>
       </div>
     </article>
   ) 

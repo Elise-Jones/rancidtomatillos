@@ -20,7 +20,7 @@ const Gallery = ( { movies, selectMovie } ) => {
   return (
     <main className="gallery">
       <div className="main-overlay">
-        <h2>~ What to Watch ~</h2>
+        <h2 className="gallery-title">~ What to Watch ~</h2>
         <section className="cards-container">
           {movieCards}
         </section>

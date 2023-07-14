@@ -8,17 +8,21 @@
 #780000 - Barn red
 */
 
-.card-image {
-  width: 35vh;
-  border-radius: 12px;
-  box-shadow: 0 0 5px #2B2D42; 
-}
-
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1.5rem;
+}
+
+article:hover {
+  cursor: pointer;
+}
+
+.card-image {
+  width: 55%;
+  border-radius: 12px;
+  box-shadow: 0 0 5px #2B2D42; 
 }
 
 .card-details{
@@ -28,19 +32,17 @@ article {
   width: 100%;
 }
 
-h3, p {
-  font-family: Prompt;
-  font-weight: 300;
-  font-size: 1.5rem;
-  width: 100%;
+.card-title {
   margin: 1rem 0 0;
 }
 
-p {
+.card-rating {
   font-size: 1rem;
   margin: 0;
 }
 
-h3:hover {
-  cursor: pointer;
+.card-title,
+.card-rating {
+  text-align: center;
+  width: 100%;
 }
