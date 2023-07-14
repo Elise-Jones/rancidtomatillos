@@ -8,16 +8,12 @@
 #780000 - Barn red
 */
 
-* {
-  /* border: 1px solid Crimson; */
-}
-
 html {
   height: 100vh;
 }
 
 body {
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   background-color: #003049;
@@ -27,4 +23,21 @@ main {
   display: flex;
   justify-content: center;
   padding: 3rem;
+}
+
+h2 {
+  color: #2B2D42;
+  font-family: Caveat;
+  font-weight: 500;
+  font-size: 3rem;
+  margin: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h3, p {
+  font-family: Prompt;
+  font-weight: 300;
 }

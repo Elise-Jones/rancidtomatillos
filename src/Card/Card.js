@@ -6,8 +6,8 @@ const Card = ({ title, rating, image }) => {
     <article>
       <img src={image} className="card-image" />
       <div className="card-details">
-        <h3>{title}</h3>
-        <p>🍅 Rating: {rating}/10</p>
+        <h3 className="card-title">{title}</h3>
+        <p className="card-rating">🍅 Rating: {rating}/10</p>
       </div>
     </article>
   );
