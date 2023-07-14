@@ -74,6 +74,44 @@ describe("Navigation between pages", () => {
 
 describe("Navigation between pages", () => {
   it("Should show error when there is network error", () => {
-    
-  })
-})
+    cy.intercept(
+      "GET",
+      "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
+      {
+        statusCode: 404,
+        fixture: "example",
+      }
+    )
+      .visit("http://localhost:3000/")
+      .get("h1")
+      .contains("Oops... something went wrong!");
+  });
+  it("Should show error when there is network error", () => {
+    cy.intercept(
+      "GET",
+      "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
+      {
+        statusCode: 500,
+        fixture: "example",
+      }
+    )
+      .visit("http://localhost:3000/")
+      .get("h1")
+      .contains("Oops... something went wrong!");
+  });
+  it("Should be able to click go home button from error page", () => {
+    cy.intercept(
+      "GET",
+      "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
+      {
+        statusCode: 500,
+        fixture: "example",
+      }
+    )
+      .visit("http://localhost:3000/")
+      .get("button")
+      .click()
+      .url()
+      .should("eq", "http://localhost:3000/");
+  });
+});
