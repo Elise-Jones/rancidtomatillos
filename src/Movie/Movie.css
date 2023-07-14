@@ -27,6 +27,7 @@ button {
   margin: 2rem;
   align-self: flex-start;
   border: 0;
+  box-shadow: 0 0 5px #2B2D42; 
 }
 
 button:hover {
@@ -53,6 +54,7 @@ button:hover {
 .movie-image {
   width: 20%;
   border-radius: 12px;
+  box-shadow: 0 0 5px #2B2D42; 
 }
 
 .movie-details {
