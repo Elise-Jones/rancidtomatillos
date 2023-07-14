@@ -29,7 +29,7 @@ const Movie = () => {
     <main>
       <div className="main-overlay">
         <Link to='/'>
-          <button><span class="material-icons-round">arrow_back</span>Go Back</button>
+          <button><span className="material-icons-round">arrow_back</span>Go Back</button>
         </Link>
         <h2 className="title">~{selectedMovie.title}~</h2>
         <h3 className="tagline">{selectedMovie.tagline}</h3>

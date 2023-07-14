@@ -7,14 +7,13 @@ const Gallery = ( { movies } ) => {
 
   const movieCards = movies.map(movie => {
     return (
-      <Link to={`${movie.id}`}>
+      <Link to={`${movie.id}`} key={movie.id}>
         <Card
           title={movie.title}
           rating={movie.average_rating}
           image={movie.poster_path}
           // is this id needed?
           id={movie.id}
-          key={movie.id}
         />
       </Link>
     )
