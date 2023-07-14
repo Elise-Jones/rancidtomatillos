@@ -41,8 +41,3 @@ const Movie = () => {
 };
 
 export default Movie;
-
-Movie.propTypes = {
-  movie: PropTypes.object,
-  selectMovie: PropTypes.func.isRequired
-}
