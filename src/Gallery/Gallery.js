@@ -9,7 +9,7 @@ const Gallery = ( { movies } ) => {
     return (
       <Link to={`${movie.id}`}>
         <Card
-          title={22}
+          title={movie.title}
           rating={movie.average_rating}
           image={movie.poster_path}
           // is this id needed?

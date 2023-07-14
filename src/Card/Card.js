@@ -1,5 +1,5 @@
-import './Card.css'
-import PropTypes from 'prop-types';
+import "./Card.css";
+import PropTypes from "prop-types";
 
 const Card = ({ title, rating, image }) => {
   return (
@@ -10,14 +10,13 @@ const Card = ({ title, rating, image }) => {
         <p>🍅 Rating: {rating}/10</p>
       </div>
     </article>
-  ) 
-}
+  );
+};
 
-export default Card
+export default Card;
 
 Card.propTypes = {
-
-    title: PropTypes.string.isRequired,
-    rating: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired
-}
+  title: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+};
