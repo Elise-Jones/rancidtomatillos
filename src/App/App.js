@@ -1,5 +1,6 @@
 import Gallery from '../Gallery/Gallery';
 import Movie from '../Movie/Movie';
+import Error from '../Error/Error';
 import movieData from '../sampleData';
 import './App.css';
 import { useState, useEffect } from 'react';
@@ -27,6 +28,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Gallery movies={movies} />} />
         <Route path='/:id' element={<Movie />} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </>
   )
