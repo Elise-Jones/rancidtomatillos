@@ -1,28 +1,31 @@
-import Card from '../Card/Card'
+import Card from '../Card/Card';
 import PropTypes from 'prop-types';
-import './Gallery.css'
+import './Gallery.css';
+import { Link } from 'react-router-dom';
 
-const Gallery = ( { movies, selectMovie } ) => {
+const Gallery = ( { movies } ) => {
 
   const movieCards = movies.map(movie => {
     return (
-      <Card
-        title={movie.title}
-        rating={movie.average_rating}
-        image={movie.poster_path}
-        id={movie.id}
-        key={movie.id}
-        selectMovie={selectMovie}
-      />
+      <Link to={`${movie.id}`} key={movie.id}>
+        <Card
+          title={movie.title}
+          rating={movie.average_rating}
+          image={movie.poster_path}
+          id={movie.id}
+        />
+      </Link>
     )
   })
 
   return (
     <main className="gallery">
-      <h2>All movies</h2>
-      <section className="cards-container">
-        {movieCards}
-      </section>
+      <div className="main-overlay">
+        <h2 className="gallery-title">~ What to Watch ~</h2>
+        <section className="cards-container">
+          {movieCards}
+        </section>
+      </div>
     </main>
   )
 }
@@ -31,5 +34,4 @@ export default Gallery
 
 Gallery.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object),
-  selectMovie: PropTypes.func.isRequired
 }
