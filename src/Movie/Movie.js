@@ -12,12 +12,6 @@ const Movie = ({ setError}) => {
     setSelectedMovie(movie);
   };
 
-  useEffect(() => {
-    getSelectedMovieData(movieID)
-      .then((data) => selectMovie(data.movie))
-      .catch((error) => setError(error));
-  }, []);
-
   const formatDate = () => {
     const months = [
       "January",
@@ -35,8 +29,23 @@ const Movie = ({ setError}) => {
     ];
     const date = new Date(selectedMovie.release_date);
     const month = months[date.getMonth() - 1];
-    return `${month} ${date.getDate()}, ${date.getFullYear()}`;
+    const day = date.getDate();
+    const year = date.getFullYear();
+    return `${month} ${day}, ${year}`;
   };
+
+  const formatGenres = () => {
+    const genres = selectedMovie.genres
+    const list = genres.join(', ')
+    return list;
+  }
+
+  useEffect(() => {
+    getSelectedMovieData(movieID)
+      .then((data) => selectMovie(data.movie))
+      .catch((error) => setError(error));
+  }, []);
+
 
   return (
     <main>
@@ -46,7 +55,7 @@ const Movie = ({ setError}) => {
             <span className="material-icons-round">arrow_back</span>Go Back
           </button>
         </Link>
-        <h2 className="title">~{selectedMovie.title}~</h2>
+        <h2 className="title">{selectedMovie.title}</h2>
         <h3 className="tagline">{selectedMovie.tagline}</h3>
         <section className="movie-details-container">
           <span className="image-container">
@@ -55,8 +64,8 @@ const Movie = ({ setError}) => {
           <span className="movie-details">
             <p className="overview">{selectedMovie.overview}</p>
             <p>🍅 Rating: {selectedMovie.average_rating}/10</p>
-            <p>Genres: {selectedMovie.genres}</p>
-            <p>Release Date: {formatDate()}</p>
+            <p>Genres: {selectedMovie && formatGenres()}</p>
+            <p>Release Date: {selectedMovie && formatDate()}</p>
             <p>Runtime: {selectedMovie.runtime} min</p>
           </span>
         </section>

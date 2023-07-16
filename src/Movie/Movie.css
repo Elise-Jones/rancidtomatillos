@@ -56,7 +56,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  width: 40%;
 }
 
 .movie-image {
@@ -67,7 +67,7 @@ button:hover {
 }
 
 .movie-details {
-  width: 50%;
+  width: 60%;
   padding-right: 4rem;
   display: flex;
   flex-direction: column;

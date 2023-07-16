@@ -72,7 +72,7 @@ describe("Navigation between pages", () => {
   });
 });
 
-describe("Error handling", () => {
+describe("Error page navigation", () => {
   it("Should show error page when there is a 400-level error", () => {
     cy.intercept(
       "GET",
