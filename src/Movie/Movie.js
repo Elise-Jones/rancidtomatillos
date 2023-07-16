@@ -47,14 +47,16 @@ const Movie = () => {
         <h2 className="title">~{selectedMovie.title}~</h2>
         <h3 className="tagline">{selectedMovie.tagline}</h3>
         <section className="movie-details-container">
-          <img className="movie-image" src={selectedMovie.poster_path} />
-          <div className="movie-details">
-            <p>{selectedMovie.overview}</p>
+          <span className="image-container">
+            <img className="movie-image" src={selectedMovie.poster_path} />
+          </span>
+          <span className="movie-details">
+            <p className="overview">{selectedMovie.overview}</p>
             <p>🍅 Rating: {selectedMovie.average_rating}/10</p>
             <p>Genres: {selectedMovie.genres}</p>
             <p>Release Date: {formatDate()}</p>
             <p>Runtime: {selectedMovie.runtime} min</p>
-          </div>
+          </span>
         </section>
       </div>
     </main>

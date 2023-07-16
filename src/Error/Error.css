@@ -1,0 +1,20 @@
+/* 
+#2B2D42 - Space cadet
+#003049 - Prussian blue
+#669BBC - Air superiority blue 
+#FDF0D5 - Papaya whip
+#EDF2F4 - Anti-flash white
+#C1121F - Fire brick
+#780000 - Barn red
+*/
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-message {
+  color: #FDF0D5;
+  margin-top: 5rem;
+}

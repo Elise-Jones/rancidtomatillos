@@ -8,6 +8,10 @@
 #780000 - Barn red
 */
 
+* {
+  text-decoration: none;
+}
+
 html {
   height: 100vh;
 }
@@ -17,6 +21,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: #003049;
+}
+
+h1, h2, h3 {
+  text-align: center;
 }
 
 main {
