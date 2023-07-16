@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getSelectedMovieData } from "../apiCalls";
 
-const Movie = () => {
+const Movie = ( { setError }) => {
   const movieID = useParams().id;
   const [selectedMovie, setSelectedMovie] = useState("");
 
@@ -13,7 +13,8 @@ const Movie = () => {
   };
 
   useEffect(() => {
-    getSelectedMovieData(movieID).then((data) => selectMovie(data.movie));
+    getSelectedMovieData(movieID).then((data) => selectMovie(data.movie))
+    .catch((error) => setError(error));
   }, []);
 
   const formatDate = () => {

@@ -12,7 +12,7 @@ const checkForError = (response) => {
   if (response.ok) {
     return response.json();
   } else {
-    throw new Error(`asdfasdf`);
+    throw new Error(`Oops... something went wrong!`);
   };
 };
 
