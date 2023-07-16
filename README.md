@@ -19,8 +19,8 @@ Our app brings the magic of movies right to your fingertips! Discover a vast lib
 
 ## Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-Paired Project
-Total Time to Complete: 60 hours over 2 weeks
+- Paired Project
+- Total Time to Complete: 60 hours over 2 weeks
 
 ### Tech:
 - JavaScript
@@ -33,8 +33,8 @@ Total Time to Complete: 60 hours over 2 weeks
 
 ## Contributors:
 [//]: <> (Who worked on this application? Link to their GitHubs.)
-[Elise Jones](https://github.com/Elise-Jones)
-[Rachel Soae Prather](https://github.com/rachelsoae)
+- [Elise Jones](https://github.com/Elise-Jones)
+- [Rachel Soae Prather](https://github.com/rachelsoae)
 
 ## Learning Goals:
 [//]: <> (What were the learning goals of this project? What tech did you work with?)
