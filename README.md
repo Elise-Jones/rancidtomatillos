@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Rancid Tomatillos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract:
+[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+Introducing the ultimate movie companion: Rancid Tomatillos.
+Our app brings the magic of movies right to your fingertips! Discover a vast library of films with striking posters, captivating titles, and glowing ratings. Dive deeper into your favorites by clicking on a movie to unveil its larger poster, enticing tagline, thrilling overview, genre details, release date, and runtime. Whether you're a film connoisseur seeking hidden gems or a casual movie enthusiast in search of blockbuster hits, our app is your go-to destination for a seamless and immersive movie experience. Enhance your movie journey today and unlock a world of cinematic wonders with our movie browsing and information app!
 
-## Available Scripts
+## Installation Instructions:
+[//]: <> (What steps does a person have to take to get your app cloned down and running?)
+1. Fork this repository
+2. Clone it down to your machine
+3. `cd` into the directory
+4. Run `npm install` to install required dependencies
+5. run `npm start` to launch the application in your default browser
 
-In the project directory, you can run:
+## Preview of App:
+[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
+![alt](URL of gif (add .gif to the end) or img)
 
-### `npm start`
+## Context:
+[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+Paired Project
+Total Time to Complete: 60 hours over 2 weeks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Tech:
+- JavaScript
+- React
+- React Router
+- React PropTypes
+- Cypress Testing
+- HTML
+- CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contributors:
+[//]: <> (Who worked on this application? Link to their GitHubs.)
+[Elise Jones](https://github.com/Elise-Jones)
+[Rachel Soae Prather](https://github.com/rachelsoae)
 
-### `npm test`
+## Learning Goals:
+[//]: <> (What were the learning goals of this project? What tech did you work with?)
+We used this project to learn the fundamentals of React, React Router, and Cypress from scratch, and are ending the project with confidence that we can independently build applications that rely on these three technologies in the future. We also used this opportunity to practice building an application that is fully responsive across large, medium, and small devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This was an exciting introduction into E2E testing, where as previously we had only done unit testing with Mocha/Chai. It was fascinating to learn how E2E testing can positively affect the look, feel, and flow of an application. Learning React, and especially using Router, was terrific because of how much easier it is to navigate through a site, and to write the code that makes it possible. Learning about the efficiencies and abilities of React was particularly fun.
 
-### `npm run build`
+One of the most difficult parts of making this application was learning how Cypress navigates through the page during testing. At first, it was a challenge to understand which elements Cypress was trying to access before making assertions. Luckily, the Cypress documentation was clear and well-organized, and we were able to efficiently locate the solutions to our problems. In the end, we developed a robust testing suite that comprehensively walks through the user flow and ensures a tight, usable UI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Plans For Future:
+[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+Many of the features we wanted to implement were outside the scope of this small project. In future iterations, however, we would consider adding the following capabilities:
+- Filter & sort movies by name, rating, and genre
+- Allow users to save a list of favorite movies
+- Allow users to save a watchlist
+- Allow users to mark movies as watched
+- Search bar
+- Comments/reviews section
+- Add movie banner as background image on movie page
