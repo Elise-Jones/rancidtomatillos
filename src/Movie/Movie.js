@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getSelectedMovieData } from "../apiCalls";
+import PropTypes from 'prop-types'
 
 const Movie = ( { setError }) => {
   const movieID = useParams().id;
@@ -63,3 +64,7 @@ const Movie = ( { setError }) => {
 };
 
 export default Movie;
+
+Movie.PropTypes = {
+  setError: PropTypes.func
+}
