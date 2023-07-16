@@ -39,11 +39,11 @@ article:hover {
 .card-rating {
   font-size: 1rem;
   margin: 0;
+  text-align: center;
 }
 
 .card-title,
 .card-rating {
-  text-align: center;
   width: 100%;
 }
 
