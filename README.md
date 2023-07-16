@@ -15,7 +15,7 @@ Our app brings the magic of movies right to your fingertips! Discover a vast lib
 
 ## Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-![alt](URL of gif (add .gif to the end) or img)
+![Preview of app](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXF3MWdwNTdtbmMwcng5czNwcjJrNm4zNWxnOHNvaGx6d3BjcjhxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/go1kOIO7teqFIsfYQo/giphy.gif)
 
 ## Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
