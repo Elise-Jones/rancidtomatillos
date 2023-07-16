@@ -12,12 +12,6 @@ const Movie = ({ setError}) => {
     setSelectedMovie(movie);
   };
 
-  useEffect(() => {
-    getSelectedMovieData(movieID)
-      .then((data) => selectMovie(data.movie))
-      .catch((error) => setError(error));
-  }, []);
-
   const formatDate = () => {
     const months = [
       "January",
@@ -46,6 +40,13 @@ const Movie = ({ setError}) => {
     return list;
   }
 
+  useEffect(() => {
+    getSelectedMovieData(movieID)
+      .then((data) => selectMovie(data.movie))
+      .catch((error) => setError(error));
+  }, []);
+
+
   return (
     <main>
       <div className="main-overlay">
@@ -63,8 +64,8 @@ const Movie = ({ setError}) => {
           <span className="movie-details">
             <p className="overview">{selectedMovie.overview}</p>
             <p>🍅 Rating: {selectedMovie.average_rating}/10</p>
-            <p>Genres: {formatGenres()}</p>
-            <p>Release Date: {formatDate()}</p>
+            <p>Genres: {selectedMovie && formatGenres()}</p>
+            <p>Release Date: {selectedMovie && formatDate()}</p>
             <p>Runtime: {selectedMovie.runtime} min</p>
           </span>
         </section>
