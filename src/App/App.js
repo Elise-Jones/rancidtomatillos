@@ -4,7 +4,7 @@ import Error from "../Error/Error";
 import "./App.css";
 import { useState, useEffect } from "react";
 import { getMoviesData } from "../apiCalls";
-import { Link, Routes, Route, Navigate } from "react-router-dom";
+import { Link, Routes, Route} from "react-router-dom";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -30,8 +30,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Gallery movies={movies} />} />
         <Route path="/:id" element={<Movie setError={setError} />} />
-        <Route path="/404" element={<Error />} />
-        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </>
   );

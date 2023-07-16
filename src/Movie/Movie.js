@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getSelectedMovieData } from "../apiCalls";
 
-const Movie = ({ setError }) => {
+const Movie = ({ setError}) => {
   const movieID = useParams().id;
   const [selectedMovie, setSelectedMovie] = useState("");
 
