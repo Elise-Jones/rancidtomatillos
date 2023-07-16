@@ -8,15 +8,16 @@
 #780000 - Barn red
 */
 
-.gallery-title, h3 {
-  color: #2B2D42;
+.gallery-title,
+h3 {
+  color: #2b2d42;
 }
 
 .main-overlay {
   width: 95%;
-  background-color: #EDF2F4;
+  background-color: #edf2f4;
   border-radius: 50px;
-  box-shadow: 0 0 10px #FDF0D5;
+  box-shadow: 0 0 10px #fdf0d5;
   margin: 2rem;
   display: flex;
   flex-direction: column;
@@ -25,5 +26,5 @@
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, 25fr);  
+  grid-template-columns: repeat(3, 25fr);
 }

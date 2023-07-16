@@ -1,5 +1,5 @@
 // import "./Error.css"
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 const Error = () => {
   return (
     <div>
@@ -10,7 +10,7 @@ const Error = () => {
         </button>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Error 
+export default Error;

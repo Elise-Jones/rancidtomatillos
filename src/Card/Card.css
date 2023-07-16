@@ -22,10 +22,10 @@ article:hover {
 .card-image {
   width: 55%;
   border-radius: 12px;
-  box-shadow: 0 0 5px #2B2D42; 
+  box-shadow: 0 0 5px #2b2d42;
 }
 
-.card-details{
+.card-details {
   display: flex;
   flex-direction: column;
   align-items: center;

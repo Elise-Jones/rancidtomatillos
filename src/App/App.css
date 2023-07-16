@@ -9,8 +9,8 @@
 */
 
 header {
-  background-color: #EDF2F4;
-  box-shadow: 0 0 25px #FDF0D5; 
+  background-color: #edf2f4;
+  box-shadow: 0 0 25px #fdf0d5;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -21,9 +21,9 @@ header {
 h1 {
   font-family: Yatra One;
   font-size: 5rem;
-  color: #C1121F;
+  color: #c1121f;
   padding-left: 2rem;
-  margin: 0
+  margin: 0;
 }
 
 .subheader {

@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getSelectedMovieData } from "../apiCalls";
-import PropTypes from 'prop-types'
 
-const Movie = ( { setError }) => {
+const Movie = ({ setError }) => {
   const movieID = useParams().id;
   const [selectedMovie, setSelectedMovie] = useState("");
 
@@ -14,8 +13,9 @@ const Movie = ( { setError }) => {
   };
 
   useEffect(() => {
-    getSelectedMovieData(movieID).then((data) => selectMovie(data.movie))
-    .catch((error) => setError(error));
+    getSelectedMovieData(movieID)
+      .then((data) => selectMovie(data.movie))
+      .catch((error) => setError(error));
   }, []);
 
   const formatDate = () => {
@@ -65,6 +65,6 @@ const Movie = ( { setError }) => {
 
 export default Movie;
 
-Movie.PropTypes = {
-  setError: PropTypes.func
-}
+Movie.propTypes = {
+  setError: PropTypes.func,
+};

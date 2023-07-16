@@ -28,7 +28,7 @@ const App = () => {
         <h2 className="subheader">Unleash Movie Magic 💫</h2>
       </header>
       <Routes>
-        <Route path="/" element={<Gallery movies={movies} />}/>
+        <Route path="/" element={<Gallery movies={movies} />} />
         <Route path="/:id" element={<Movie setError={setError} />} />
         <Route path="/404" element={<Error />} />
         <Route path="*" element={<Navigate to="/404" />} />
