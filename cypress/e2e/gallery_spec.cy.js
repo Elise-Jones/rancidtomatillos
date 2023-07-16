@@ -72,46 +72,43 @@ describe("Navigation between pages", () => {
   });
 });
 
-describe("Navigation between pages", () => {
-  it("Should show error when there is network error", () => {
+describe("Error handling", () => {
+  it("Should show error page when there is a 400-level error", () => {
     cy.intercept(
       "GET",
       "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
       {
-        statusCode: 404,
-        fixture: "example",
+        statusCode: 404
       }
     )
-      .visit("http://localhost:3000/")
+      .visit("http://localhost:3000")
+      .url().should("eq", "http://localhost:3000/error");
+      cy.get("h1")
+      .contains("Oops... Something went wrong!");
+  });
+  it("Should show error page when there is a 500-level error", () => {
+    cy.intercept(
+      "GET",
+      "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
+      {
+        statusCode: 500
+      }
+    )
+      .visit("http://localhost:3000")
       .get("h1")
       .contains("Oops... Something went wrong!");
   });
-  it("Should show error when there is network error", () => {
+  it("Should be able to navigate from error page to home page on button click", () => {
     cy.intercept(
       "GET",
       "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
       {
-        statusCode: 500,
-        fixture: "example",
-      }
-    )
-      .visit("http://localhost:3000/")
-      .get("h1")
-      .contains("Oops... Something went wrong!");
-  });
-  it("Should be able to click go home button from error page", () => {
-    cy.intercept(
-      "GET",
-      "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
-      {
-        statusCode: 500,
-        fixture: "example",
+        statusCode: 500
       }
     )
       .visit("http://localhost:3000/")
       .get("button")
       .click()
-      .url()
-      .should("eq", "http://localhost:3000/");
+      .url().should("eq", "http://localhost:3000/");
   });
 });
