@@ -61,3 +61,19 @@ button:hover {
   width: 50%;
 }
 
+@media only screen and (max-width: 600px) {
+  .movie-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .movie-image {
+    width: 60%;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
