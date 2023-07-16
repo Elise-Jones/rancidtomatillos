@@ -56,18 +56,18 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
+  width: 40%;
 }
 
 .movie-image {
   border-radius: 12px;
   box-shadow: 0 0 5px #2b2d42;
-  width: 50%;
+  width: 70%;
   height: auto;
 }
 
 .movie-details {
-  width: 50%;
+  width: 60%;
   padding-right: 4rem;
   display: flex;
   flex-direction: column;
