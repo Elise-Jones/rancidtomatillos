@@ -42,21 +42,69 @@ button:hover {
 
 .tagline {
   width: auto;
+  margin: 0;
 }
 
 .movie-details-container {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  margin: 3rem;
+  margin: 2rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .movie-image {
-  width: 20%;
   border-radius: 12px;
   box-shadow: 0 0 5px #2b2d42;
+  width: 70%;
+  height: auto;
 }
 
 .movie-details {
   width: 50%;
+  padding-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.overview {
+  margin-top: 0;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+  .movie-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+  }
+
+  .movie-image {
+    width: 50%;
+  }
+
+  .movie-details {
+    padding: 0;
+    align-items: center;
+  }
+
+  .overview {
+    padding-top: 1rem;
+    text-align: center;
+  }
+}
+
+/* For medium screen devices */
+@media only screen and (max-width: 897px) {
+  .movie-details {
+    width: 60%;
+  }
 }

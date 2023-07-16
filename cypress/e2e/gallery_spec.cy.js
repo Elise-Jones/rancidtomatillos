@@ -84,7 +84,7 @@ describe("Navigation between pages", () => {
     )
       .visit("http://localhost:3000/")
       .get("h1")
-      .contains("Oops... something went wrong!");
+      .contains("Oops... Something went wrong!");
   });
   it("Should show error when there is network error", () => {
     cy.intercept(
@@ -97,7 +97,7 @@ describe("Navigation between pages", () => {
     )
       .visit("http://localhost:3000/")
       .get("h1")
-      .contains("Oops... something went wrong!");
+      .contains("Oops... Something went wrong!");
   });
   it("Should be able to click go home button from error page", () => {
     cy.intercept(
