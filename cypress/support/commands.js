@@ -12,7 +12,7 @@ Cypress.Commands.add('loadPage', () => {
   cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
       statusCode: 200,
       fixture: 'example'
-    })
+    }).as('loadMovies')
     .visit('http://localhost:3000/');
 })
 
@@ -20,10 +20,20 @@ Cypress.Commands.add('getSingleFirstView', () => {
   cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270', {
       statusCode: 200,
       fixture: 'movie'
-    })
-  cy.get('.cards-container')
+    }).as('loadSelectedMovie')
+    cy.get('.cards-container')
     .get('article').first().contains('h3', 'Black Adam')
     .click()
+});
+
+Cypress.Commands.add('simulate500Error', () => {
+  cy.intercept(
+    "GET",
+    "https://rancid-tomatillos.herokuapp.com/api/v2/movies",
+    {
+      statusCode: 500
+    }
+  ).as('500Error')
 })
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
